@@ -24,7 +24,7 @@ if (checkInElement) {
 } 
 
 if (checkOutElement) {
-  if ((nowHour() >= 20 && nowMinute <= 30)&& checkOutElement.textContent.includes("퇴실하기")) {
+  if ((nowHour() == 18 && nowMinute <= 30)&& checkOutElement.textContent.includes("퇴실하기")) {
     console.log("클릭");
     checkOutElement.click();
     setTimeout(function() {
