@@ -49,8 +49,9 @@ if (checkInElement) {
   let checkOutTimeElement = checkOutElement.querySelector("span");
   if (checkOutTimeElement) {
     let [outHour, outMinute] = checkOutTimeElement.textContent.trim().split(':').map(Number);
-    if (!isAllowCheckOut(outHour, outMinute)) {
-      console.log("퇴실 가능 시간 전에 퇴실을 눌렀습니다.");
+    if (isAllowCheckOut(outHour, outMinute)) {
+      console.log("퇴실 완료했습니다.");
+    }else{
       handleCheckOut(currentHour, currentMinute, checkOutElement)
     }
   } else {
