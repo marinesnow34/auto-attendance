@@ -16,7 +16,7 @@ function isAllowCheckOut(hour, minute) {
 
 function clickElement(element){
   element.click();
-  setTimeout(() => location.reload(true), 1000);
+  setTimeout(() => location.reload(true), 100);
 }
 
 function handleCheckIn(hour, minute, element) {
